@@ -13,7 +13,8 @@ xs /*/ a = map (*a) xs
 zeros :: (Num a, Ord a, Fractional a, Show a) => [a] -> [a] -- list of zeros of equal length to the input list
 zeros = map (* 0)
 
-thetasToString :: (Num a, Ord a, Fractional a, Show a) => ([a], a) -> IO() -- starting theta, theta0
+thetasToString :: (Num a, Ord a, Fractional a, Show a) => ([a], a) -> -- starting theta, theta0
+     IO() 
 thetasToString (theta, theta0) = putStr ("Theta: \n " ++ foldr (\x acc -> show x ++ "\n" ++ acc) "\n" theta ++ "theta 0: "++ show theta0 ++ "\n")
 {------------------------------------}
 
